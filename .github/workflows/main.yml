@@ -68,6 +68,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             # Выполняет pull образа с DockerHub
+            sudo pwd
+            sudo ls -a
             sudo docker pull atimsru/test1:v1
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
